@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 62.5%
+    }
+    
+@media only screen and (min-width: 481px) {
+html {
+font-size:80%!important
+}
+}
+
+@media only screen and (min-width: 561px) {
+html {
+font-size:90%!important
+}
+}
+
+@media only screen and (min-width: 641px) {
+html {
+font-size:100%!important
+}
+}
+body,html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
