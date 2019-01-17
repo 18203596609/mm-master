@@ -1,3 +1,138 @@
-<p>
-  left-content works!
-</p>
+<div id="left-meau">
+  <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
+    <li nz-submenu [(nzOpen)]="openMap.sub1" (nzOpenChange)="openHandler('sub1')">
+      <span title><i nz-icon type="mail"></i> 快速上手</span>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>教程</span>
+      <ul>
+          <li nz-menu-item *ngFor='let item of jcCont'>{{item}}</li>
+      </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub3" (nzOpenChange)="openHandler('sub3')">
+      <span title><i nz-icon type="setting"></i>核心知识</span>
+      <ul>
+          <li nz-menu-item>架构</li>
+          <li nz-menu-item>组件与模版</li>
+          <li nz-submenu>
+            <span title>表单</span>
+            <ul>
+              <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title>表单</span>
+            <ul>
+                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title>表单</span>
+            <ul>
+                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title>表单</span>
+            <ul>
+                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+            </ul>
+          </li>
+        </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>其它技术</span>
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu>
+          <span title>Submenu</span>
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>环境搭建与部署</span>
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu>
+          <span title>Submenu</span>
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>发布信息</span>
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu>
+          <span title>Submenu</span>
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>快捷手册</span>
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu>
+          <span title>Submenu</span>
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+      <span title><i nz-icon type="appstore"></i>API参考手册</span>
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu>
+          <span title>Submenu</span>
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+ <!-- <div>
+    <ul>
+      <li><a href="" title="">快速上手</a></li>
+      <li><a href="" title="">教程</a>
+        <ul>
+          <li *ngFor='let item of jcCont'>
+            <a href="" title="">{{item}}</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://www.angular.cn/guide/quickstart" title="" target="_blank">核心知识</a>
+        <ul>
+          <li *ngFor='let item of zcCont'><a href="">{{item}}</a></li>
+        </ul>
+      </li>
+      <li><a href="" title="">其它技术</a></li>
+      <li><a href="" title="">环境搭建与部署</a></li>
+      <li><a href="" title="">发布信息</a></li>
+      <li><a href="" title="">快捷手册</a></li>
+      <li><a href="" title="">API参考手册</a></li>
+    </ul>
+  </div>-->
+</div>
