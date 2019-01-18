@@ -1,47 +1,47 @@
 <div id="left-meau">
   <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
-    <li nz-submenu [(nzOpen)]="openMap.sub1" (nzOpenChange)="openHandler('sub1')">
-      <span title><i nz-icon type="mail"></i> 快速上手</span>
+    <li nz-menu-item (click)='btnClick($event.target.innerText)'>
+      <span title> 快速上手</span>
     </li>
     <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
-      <span title><i nz-icon type="appstore"></i>教程</span>
+      <span title>教程</span>
       <ul>
-          <li nz-menu-item *ngFor='let item of jcCont'>{{item}}</li>
+        <li nz-menu-item *ngFor='let item of jcCont'>{{item}}</li>
       </ul>
     </li>
     <li nz-submenu [(nzOpen)]="openMap.sub3" (nzOpenChange)="openHandler('sub3')">
-      <span title><i nz-icon type="setting"></i>核心知识</span>
+      <span title><i nz-icon type="right"></i>核心知识</span>
       <ul>
-          <li nz-menu-item>架构</li>
-          <li nz-menu-item>组件与模版</li>
-          <li nz-submenu>
-            <span title>表单</span>
-            <ul>
-              <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
-            </ul>
-          </li>
-          <li nz-submenu>
-            <span title>表单</span>
-            <ul>
-                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
-            </ul>
-          </li>
-          <li nz-submenu>
-            <span title>表单</span>
-            <ul>
-                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
-            </ul>
-          </li>
-          <li nz-submenu>
-            <span title>表单</span>
-            <ul>
-                <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
-            </ul>
-          </li>
-        </ul>
+        <li nz-menu-item (click)='btnClick($event.target.innerHTML)'>架构</li>
+        <li nz-menu-item (click)='btnClick($event.target.innerText)'>组件与模版</li>
+        <li nz-submenu>
+          <span title>表单</span>
+          <ul>
+            <li (click)='btnClick($event.target.innerText)' nz-menu-item *ngFor='let item of content'>{{item}}</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>表单</span>
+          <ul>
+            <li (click)='btnClick($event.target.innerText)' nz-menu-item *ngFor='let item of content'>{{item}}</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>表单</span>
+          <ul>
+            <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>表单</span>
+          <ul>
+            <li nz-menu-item *ngFor='let item of content'>{{item}}</li>
+          </ul>
+        </li>
+      </ul>
     </li>
-    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
-      <span title><i nz-icon type="appstore"></i>其它技术</span>
+    <li nz-submenu [(nzOpen)]="openMap.sub4" (nzOpenChange)="openHandler('sub4')">
+      <span title><i nz-icon type="'right'"></i>其它技术</span>
       <ul>
         <li nz-menu-item>Option 5</li>
         <li nz-menu-item>Option 6</li>
@@ -54,7 +54,7 @@
         </li>
       </ul>
     </li>
-    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+    <li nz-submenu [(nzOpen)]="openMap.sub5" (nzOpenChange)="openHandler('sub5')">
       <span title><i nz-icon type="appstore"></i>环境搭建与部署</span>
       <ul>
         <li nz-menu-item>Option 5</li>
@@ -68,7 +68,7 @@
         </li>
       </ul>
     </li>
-    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+    <li nz-submenu [(nzOpen)]="openMap.sub6" (nzOpenChange)="openHandler('sub6')">
       <span title><i nz-icon type="appstore"></i>发布信息</span>
       <ul>
         <li nz-menu-item>Option 5</li>
@@ -82,7 +82,7 @@
         </li>
       </ul>
     </li>
-    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+    <li nz-submenu [(nzOpen)]="openMap.sub7" (nzOpenChange)="openHandler('sub7')">
       <span title><i nz-icon type="appstore"></i>快捷手册</span>
       <ul>
         <li nz-menu-item>Option 5</li>
@@ -96,24 +96,20 @@
         </li>
       </ul>
     </li>
-    <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
+    <li nz-menu-item>
       <span title><i nz-icon type="appstore"></i>API参考手册</span>
-      <ul>
-        <li nz-menu-item>Option 5</li>
-        <li nz-menu-item>Option 6</li>
-        <li nz-submenu>
-          <span title>Submenu</span>
-          <ul>
-            <li nz-menu-item>Option 7</li>
-            <li nz-menu-item>Option 8</li>
-          </ul>
-        </li>
-      </ul>
     </li>
   </ul>
+  <hr />
+  <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
+    <li nz-menu-item *ngFor='let item of lfbuttom'>
+      <span title><i nz-icon type="mail"></i> {{item}}</span>
+    </li>
+  </ul>
+  <!--<app-chleft-one [meauValue]='value'></app-chleft-one>-->
+  <!-- <i nz-icon ></i> -->
 
-
- <!-- <div>
+  <!-- <div>
     <ul>
       <li><a href="" title="">快速上手</a></li>
       <li><a href="" title="">教程</a>
@@ -136,3 +132,4 @@
     </ul>
   </div>-->
 </div>
+
