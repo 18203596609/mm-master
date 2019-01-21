@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CenterContentComponent } from './component/center-content/center-content.component';
 import { RightContentComponent } from './component/right-content/right-content.component';
+import {HomePageComponent} from './component/home-page/home-page.component';
 
 const routes: Routes = [
-  { path: '', component: CenterContentComponent },
+  { path: '', component: HomePageComponent },
+  { path: 'jianjie', component: CenterContentComponent },
   { path: 'a', component: RightContentComponent }
 ];
 @NgModule({

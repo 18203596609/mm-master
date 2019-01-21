@@ -1,18 +1,21 @@
 <div id="left-meau">
   <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
     <li nz-menu-item (click)='btnClick($event.target.innerText)'>
-      <span title> 快速上手</span>
+      <span title> <a routerLink='/' >快速上手</a>
+      </span>
     </li>
     <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')">
       <span title>教程</span>
       <ul>
-        <li nz-menu-item *ngFor='let item of jcCont'>{{item}}</li>
+        <li nz-menu-item *ngFor='let item of jcCont'>
+            <a routerLink='/jianjie' >{{item}}</a></li>
       </ul>
     </li>
     <li nz-submenu [(nzOpen)]="openMap.sub3" (nzOpenChange)="openHandler('sub3')">
       <span title><i nz-icon type="right"></i>核心知识</span>
       <ul>
-        <li nz-menu-item (click)='btnClick($event.target.innerHTML)'>架构</li>
+        <li nz-menu-item (click)='btnClick($event.target.innerHTML)'>
+            <a routerLink='/a' >架构</a></li>
         <li nz-menu-item (click)='btnClick($event.target.innerText)'>组件与模版</li>
         <li nz-submenu>
           <span title>表单</span>
